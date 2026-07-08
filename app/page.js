@@ -22,13 +22,13 @@ export default function Home() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-16">
       <div className="text-center mb-12">
-        <div className="relative w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden border-4 border-accent-soft bg-accent-soft shadow-sm flex items-center justify-center">
+        <div className="relative w-72 h-72 sm:w-80 sm:h-80 mx-auto mb-8 rounded-2xl overflow-hidden border-4 border-accent-soft bg-accent-soft shadow-sm flex items-center justify-center">
           {hasHero ? (
             <Image
               src="/images/karen-hero.jpg"
               alt="Karen Sue Blackmon"
               fill
-              sizes="192px"
+              sizes="(max-width: 640px) 288px, 320px"
               className="object-cover"
               priority
             />
