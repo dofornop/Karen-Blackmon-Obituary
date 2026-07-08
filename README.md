@@ -15,15 +15,20 @@ already git-ignored) so no external database is needed for development.
 
 ## Adding photos
 
-1. Drop image files into `public/images/gallery/`.
-2. List them in `lib/photos.js`:
-   ```js
-   export const photos = [
-     { src: "/images/gallery/karen-1969-graduation.jpg", caption: "Findlay College graduation, 1969" },
-   ];
-   ```
-3. For the hero photo on the home page, add an image at
-   `public/images/karen-hero.jpg` (any square-ish photo works well).
+Drop image files into `public/images/gallery/` — that's it. The gallery
+page automatically picks up every image in that folder, sorted by
+filename, with a caption generated from the filename (so
+`karen-1969-graduation.jpg` becomes "karen 1969 graduation"; name your
+files accordingly, e.g. `findlay-college-graduation-1969.jpg`).
+
+You can add photos either by editing locally and pushing to GitHub, or by
+uploading them directly through GitHub's website (open the
+`public/images/gallery` folder in the repo, click **Add file → Upload
+files**, drag photos in, commit) — Vercel redeploys automatically either
+way, no code changes needed.
+
+For the hero photo on the home page, add an image at
+`public/images/karen-hero.jpg` (any square-ish photo works well).
 
 ## The admin page
 
