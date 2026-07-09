@@ -26,7 +26,7 @@ const donations = [
   },
   {
     name: "Marblehead Peninsula Lion’s Club Foundation",
-    url: "https://e-clubhouse.org/sites/marblehead_peninsula/index.php",
+    url: "https://www.facebook.com/marbleheadpeninsulalions",
     description:
       "donations can also be mailed to Marblehead Peninsula Lion’s Club Foundation, c/o Tod Kelly, 6005 East Harbor Rd 3-C, Marblehead, OH 43440",
   },
@@ -82,7 +82,7 @@ export default function Home() {
           ))}
         </article>
 
-        <section className="border-t border-border pt-12 pb-16">
+        <section className="mb-16 bg-accent-soft/15 border border-accent-soft/40 rounded-2xl px-6 py-10 sm:px-12 sm:py-12">
           <h2 className="font-serif text-2xl sm:text-3xl text-accent mb-6">
             Donations in Honor of Karen&rsquo;s Passing
           </h2>
