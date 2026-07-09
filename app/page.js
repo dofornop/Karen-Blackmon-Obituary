@@ -20,35 +20,48 @@ export default function Home() {
   const hasHero = heroPhotoExists();
 
   return (
-    <div className="max-w-3xl mx-auto px-6 py-16">
-      <div className="text-center mb-12">
-        <div className="relative w-72 h-72 sm:w-80 sm:h-80 mx-auto mb-8 rounded-2xl overflow-hidden border-4 border-accent-soft bg-accent-soft shadow-sm flex items-center justify-center">
-          {hasHero ? (
-            <Image
-              src="/images/karen-hero.jpg"
-              alt="Karen Sue Blackmon"
-              fill
-              sizes="(max-width: 640px) 288px, 320px"
-              className="object-cover"
-              priority
-            />
-          ) : (
-            <span className="font-serif text-5xl text-accent">KB</span>
-          )}
-        </div>
-        <h1 className="font-serif text-4xl sm:text-5xl text-accent mb-3">
-          Karen Sue Blackmon
-        </h1>
-        <p className="text-muted text-lg">August 15, 1945 &ndash; July 6, 2026</p>
+    <div>
+      <div className="relative w-full h-[260px] sm:h-[400px] bg-accent overflow-hidden">
+        <Image
+          src="/images/marblehead-lighthouse-bg.jpg"
+          alt="Marblehead Lighthouse, Ohio"
+          fill
+          sizes="100vw"
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      <article className="bg-surface border border-border rounded-2xl px-6 py-10 sm:px-12 sm:py-14 space-y-6 shadow-sm">
-        {obituaryParagraphs.map((paragraph, i) => (
-          <p key={i} className="leading-relaxed text-[1.05rem]">
-            {paragraph}
-          </p>
-        ))}
-      </article>
+      <div className="max-w-4xl mx-auto px-6 sm:px-10">
+        <div className="relative z-10 -mt-24 sm:-mt-40 text-center">
+          <div className="relative w-48 h-48 sm:w-72 sm:h-72 mx-auto mb-6 rounded-2xl overflow-hidden border-4 border-background shadow-md bg-accent-soft flex items-center justify-center">
+            {hasHero ? (
+              <Image
+                src="/images/karen-hero.jpg"
+                alt="Karen Sue Blackmon"
+                fill
+                sizes="(max-width: 640px) 192px, 288px"
+                className="object-cover"
+              />
+            ) : (
+              <span className="font-serif text-4xl text-accent">KB</span>
+            )}
+          </div>
+          <h1 className="font-serif text-4xl sm:text-5xl text-accent mb-3">
+            Karen Sue Blackmon
+          </h1>
+          <p className="text-muted text-lg">August 15, 1945 &ndash; July 6, 2026</p>
+        </div>
+
+        <article className="space-y-6 pt-12 pb-16">
+          {obituaryParagraphs.map((paragraph, i) => (
+            <p key={i} className="leading-relaxed text-[1.05rem]">
+              {paragraph}
+            </p>
+          ))}
+        </article>
+      </div>
     </div>
   );
 }
