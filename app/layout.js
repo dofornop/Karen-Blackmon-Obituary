@@ -14,6 +14,7 @@ const inter = Inter({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://karen-blackmon-obituary.vercel.app"),
   title: "In Loving Memory of Karen Sue Blackmon",
   description:
     "A tribute to Karen Sue Blackmon (1945–2026) — teacher, social worker, volunteer, wife, mother, and friend.",
