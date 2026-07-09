@@ -43,7 +43,7 @@ export default function Home() {
     <div>
       <div className="relative w-full h-[260px] sm:h-[400px] bg-accent overflow-hidden">
         <Image
-          src="/images/marblehead-lighthouse-bg.jpg"
+          src="/images/LakeErieLighthouse.jpg"
           alt="Marblehead Lighthouse, Ohio"
           fill
           sizes="100vw"
