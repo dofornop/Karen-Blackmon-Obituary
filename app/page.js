@@ -12,6 +12,26 @@ const obituaryParagraphs = [
   "Karen will be remembered for her decades of dedication to education and social work, and for the love and care she brought to her family and to all those whose lives she touched.",
 ];
 
+const donations = [
+  {
+    name: "Bistro 163",
+    url: "https://bistrol63.networkforgood.com/",
+    description: "alleviating food insecurity in Port Clinton, OH",
+  },
+  {
+    name: "Missions International of America",
+    url: "https://www.missionsinternationalofamerica.com/",
+    description:
+      "benefitting the education and welfare of the people of Savanette, Haiti",
+  },
+  {
+    name: "Marblehead Peninsula Lion’s Club Foundation",
+    url: "https://e-clubhouse.org/sites/marblehead_peninsula/index.php",
+    description:
+      "donations can also be mailed to Marblehead Peninsula Lion’s Club Foundation, c/o Tod Kelly, 6005 East Harbor Rd 3-C, Marblehead, OH 43440",
+  },
+];
+
 function heroPhotoExists() {
   return fs.existsSync(path.join(process.cwd(), "public/images/karen-hero.jpg"));
 }
@@ -61,6 +81,31 @@ export default function Home() {
             </p>
           ))}
         </article>
+
+        <section className="border-t border-border pt-12 pb-16">
+          <h2 className="font-serif text-2xl sm:text-3xl text-accent mb-6">
+            Donations in Honor of Karen&rsquo;s Passing
+          </h2>
+          <p className="leading-relaxed text-[1.05rem] mb-4">
+            Donations in memory of Karen may be made to the following
+            organizations:
+          </p>
+          <ul className="space-y-4">
+            {donations.map((org) => (
+              <li key={org.name} className="leading-relaxed text-[1.05rem]">
+                <a
+                  href={org.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent underline decoration-accent-soft underline-offset-2 hover:decoration-accent"
+                >
+                  {org.name}
+                </a>
+                , {org.description}
+              </li>
+            ))}
+          </ul>
+        </section>
       </div>
     </div>
   );
