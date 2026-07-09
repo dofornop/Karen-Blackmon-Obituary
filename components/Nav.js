@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/gallery", label: "Gallery" },
+  { href: "/gallery", label: "Picture Gallery" },
   { href: "/guestbook", label: "Guestbook" },
 ];
 
@@ -16,7 +16,7 @@ export default function Nav() {
     <header className="border-b border-border bg-surface/80 backdrop-blur sticky top-0 z-40">
       <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="font-serif text-lg text-accent">
-          Karen Sue Blackmon
+          Karen Sue Blackmon Obituary
         </Link>
         <nav className="flex gap-6 text-sm">
           {links.map((link) => (
